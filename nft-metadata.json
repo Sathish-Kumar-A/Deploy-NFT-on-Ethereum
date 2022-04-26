@@ -1,0 +1,15 @@
+{
+    "attributes":[
+        {
+            "trait_type":"Framework type",
+            "value":"JavaScript"
+        },
+        {
+            "trait_type":"usage" ,
+            "value":"Client_side"
+                       }
+    ],
+    "name":"React",
+    "description":"A JavaScript library for building user interfaces",
+    "image": "ipfs://QmVgiwsQeVUA4yzk9CKTP2w9Aam5RGNkD6DuBMRd6CHewa"
+}
