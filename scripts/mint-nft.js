@@ -2,6 +2,7 @@ require("dotenv").config();
 const { API_URL,PUBLIC_KEY,PRIVATE_KEY } = process.env;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(API_URL);
+
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json");
 const contractAddress = "0x946757f6891422453b7312e8b10f1cdbe058a6bb";
 
