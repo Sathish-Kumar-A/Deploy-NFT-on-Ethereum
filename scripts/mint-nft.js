@@ -4,7 +4,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(API_URL);
 
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json");
-const contractAddress = "0x946757f6891422453b7312e8b10f1cdbe058a6bb";
+const contractAddress = "0x4a02a6b863A9171495D28d69c53E2F9152120dc6";
 
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
 
@@ -33,4 +33,4 @@ async function mintNFT(tokenURI) {
     })
 };
 
-mintNFT("ipfs://Qmd54sm5tHmkQUYhpqPuvWNhquKUh4BYipF9SL51mqkrKj")
+mintNFT("ipfs://QmZ7KnAX1QdZRHRqDZyS2pqC684dEbv86fNCQwmLF5CehM");

@@ -1,0 +1,14 @@
+{
+    "attributes": [{
+            "trait_type": "Age",
+            "value": "22"
+        },
+        {
+            "trait_type": "Background",
+            "value": "Asthetic"
+        }
+    ],
+    "name": "Sathish Kumar",
+    "description": "Software Developer Twitter Pic",
+    "image": "ipfs://QmYHf5PinrL3iYoGGdEGK2eC5jVxtmoNqkzqhNbxnp7EJo"
+}
