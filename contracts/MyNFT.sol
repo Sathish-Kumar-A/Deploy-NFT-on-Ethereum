@@ -7,11 +7,14 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
 
-contract MyNFT is ERC721URIStorage, Ownable {
+contract MyNFT is ERC721URIStorage, Ownable{
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
+    address public ownerAddress;
 
-    constructor() ERC721("MyNFT","NFT"){}
+    constructor() ERC721("MyNFT","NFT"){
+        ownerAddress=msg.sender;
+    }
 
     function mintNFT(address recipient, string memory tokenURI)
         public onlyOwner
@@ -23,6 +26,24 @@ contract MyNFT is ERC721URIStorage, Ownable {
         _setTokenURI(newItemId, tokenURI);
 
         return newItemId;
+    }
+
+    function isOwner() view public returns (bool) {
+        if(ownerAddress==address(msg.sender)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    function getOwner() view public returns (address){
+        return ownerAddress;
+    }
+
+    function transferToken(uint token_id) public returns(uint){
+        _transfer(ownerAddress,msg.sender,token_id);
+        return token_id;
     }
 
 }
