@@ -958,8 +958,8 @@
       ]
     },
     "E:\\Blockchain\\pinata\\nft-app\\src\\Polygon-NFT\\contracts\\MyNFT.sol": {
-      "lastModificationDate": 1651495183087,
-      "contentHash": "69512410246ee61c30ae0097f2108acf",
+      "lastModificationDate": 1651644940265,
+      "contentHash": "7f8bd455c53f960058ea83006c7b9064",
       "sourceName": "contracts/MyNFT.sol",
       "solcConfig": {
         "version": "0.8.1",

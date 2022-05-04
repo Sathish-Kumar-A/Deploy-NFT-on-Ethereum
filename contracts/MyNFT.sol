@@ -11,9 +11,11 @@ contract MyNFT is ERC721URIStorage, Ownable{
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
     address public ownerAddress;
+    address payable public ownerPayAddress;
 
     constructor() ERC721("MyNFT","NFT"){
         ownerAddress=msg.sender;
+        ownerPayAddress=payable(msg.sender);
     }
 
     function mintNFT(address recipient, string memory tokenURI)
@@ -41,7 +43,8 @@ contract MyNFT is ERC721URIStorage, Ownable{
         return ownerAddress;
     }
 
-    function transferToken(uint token_id) public returns(uint){
+    function transferToken(uint token_id) public payable returns(uint){
+        ownerPayAddress.transfer(msg.value);
         _transfer(ownerAddress,msg.sender,token_id);
         return token_id;
     }
